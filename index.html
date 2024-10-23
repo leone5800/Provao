@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informativo Provão Paulista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Estudo - Provão Paulista</h1>
+    <p>Conteúdo que pode cair no Provão Paulista.</p>
+  </header>
+
+  <div class="tabs">
+  
+
+    </label>
+
+    <div class="tablinks">
+      <button class="tablink" onclick="openTab(event, 'inicio')">Início</button>
+      <button class="tablink" onclick="openTab(event, 'matematica')">📚 Matemática</button>
+      <button class="tablink" onclick="openTab(event, 'portugues')">📖 Português</button>
+      <button class="tablink" onclick="openTab(event, 'biologia')">🔬 Biologia</button>
+      <button class="tablink" onclick="openTab(event, 'historia')">📜 História</button>
+      <button class="tablink" onclick="openTab(event, 'geografia')">🌍 Geografia</button>
+      <button class="tablink" onclick="openTab(event, 'ingles')">🏈 Inglês</button>
+    </div>
+  </div>
+
+
+  <div id="inicio" class="tabcontent">
+    <h2>Bem-vindo ao Sistema de Estudos do Provão Paulista</h2>
+    <p>Este sistema foi desenvolvido para auxiliar os alunos na preparação para o Provão Paulista, que ocorrerá nos dias <strong>30 e 31 de outubro</strong>. Essa prova é extremamente importante para quem deseja entrar em uma faculdade, pois é um dos principais requisitos para o ingresso em instituições públicas e privadas de ensino superior.</p>
+    <p>A atividade dos alunos será desenvolver um sistema com materiais de estudo que abordem os principais tópicos cobrados na prova. Aqui você encontrará conteúdos sobre Matemática, Português, Ciências, História, Geografia e outros, além de formulários para praticar os conhecimentos adquiridos e blocos de anotações para registrar suas dúvidas e estudos.</p>
+    
+  
+    <div class="image-container">
+      <img src="img/image.png" alt="Imagem ilustrativa sobre o Provão Paulista">
+    </div>
+    
+    <div class="activity-text">
+        <h1>ATIVIDADE DO TIO ERICK</h1>
+        <p>Construa nas demais abas um material de estudo para cada matéria listada na parte superior do site.</p>
+        
+        <p>Quero tirar um momento para falar diretamente com vocês. Este é um período muito importante em suas vidas, e eu gostaria que vocês se esforçassem ao máximo. O Provão Paulista é mais do que apenas uma prova; é uma oportunidade incrível de dar um passo em direção ao futuro que vocês sempre sonharam. Acreditem em mim quando digo que o esforço que vocês colocam agora pode abrir portas para as faculdades que tanto desejam.</p>
+        
+        <p>Lembrem-se de que cada um de vocês tem um potencial enorme. Eu amo cada um de vocês e já sinto um imenso orgulho pelo trabalho que vocês têm feito até aqui. Estou confiante de que, se se dedicarem e acreditarem em si mesmos, conseguirão alcançar grandes conquistas.</p>
+        
+        <p>Espero encontrá-los no topo algum dia, realizando os sonhos que têm cultivado com tanto carinho. Continuem firmes e lembrem-se: vocês são capazes de conseguir, eu amo muito cada um de vocês.</p>
+        
+        <p class="signature">Bons estudos do Professor e muito gato, <strong>Erick Barbosa</strong></p>
+    </div>
+  </div>
+
+  <div id="matematica" class="tabcontent">
+    <h2>Matemática</h2>
+    <p>Tópicos importantes:</p>
+    <br>
+    <ul>
+      <h2>Aaritmetica</h2>
+     <p>A aritmética é o estudo das operações básicas com números: adição, subtração, multiplicação e divisão. Ela é fundamental para resolver problemas do cotidiano.</p>
+      <h3>Exemplo:</h3>
+      <br>
+     <div class="image-container">
+        <img src="img/OIP.jfif" alt="">
+
+          <h2>Atividade de Aritmética: Qual é a soma?</h2>
+          <p>Qual é o resultado da soma de <strong>520 x 23</strong>?</p>
+        
+            <!-- Campo de entrada para o usuário inserir a resposta -->
+            <input type="number" id="resposta" placeholder="Digite sua resposta">
+        
+            <!-- Botão para verificar a resposta -->
+            <button  onclick="verificarResposta()">Verificar Resposta</button>
+        
+            <!-- Área de exibição da resposta -->
+            <p id="resultado"></p>
+        
+            <script>
+                // Função para verificar se a resposta está correta
+                function verificarResposta() {
+                    let respostaUsuario = document.getElementById("resposta").value;
+                    let respostaCorreta = 11960; // Resposta correta da soma 520 * 23
+        
+                    if (respostaUsuario == respostaCorreta) {
+                        document.getElementById("resultado").innerHTML = "Correto! 520 x 23=" + respostaCorreta;
+                    } else {
+                        document.getElementById("resultado").innerHTML = "Incorreto. Tente novamente!";
+                    }
+                }
+            </script>
+      </div>
+      <h2>Geometria</h2>
+     
+      <br>
+      <p>A geometria estuda formas e suas propriedades no espaço e no plano, usando conceitos como pontos, linhas e ângulos.</p>
+      <p>Ela é fundamental para compreender a estrutura do mundo ao nosso redor, desde figuras simples até formas complexas.</p>
+    <br>
+    <h2>Cálculo da Área de um Triângulo</h2>
+    <br>
+   <h3>Exemplo:</h3>
+    <div class="image-container">
+      <img id="h" src="img/bg1.png">
+      <br>
+      <p>Insira a base e a altura do triângulo:</p>
+      <br>
+    <label for="base">Base: </label>
+    <input type="number" id="base" placeholder="Digite a base"><br><br>
+
+    <label for="height">Altura: </label>
+    <input type="number" id="height" placeholder="Digite a altura"><br><br>
+    <p id="resultado2"></p>
+<br>
+    <button onclick="calcularArea()">Calcular Área</button>
+
+
+    <script>
+        function calcularArea() {
+            const base = document.getElementById("base").value;
+            const altura = document.getElementById("height").value;
+
+            if(base > 0 && altura > 0) {
+                const area = (base * altura) / 2;
+                document.getElementById("resultado2").innerText = "A área do triângulo é: " + area + " unidades quadradas.";
+            } else {
+                document.getElementById("resultado2").innerText = "Por favor, insira valores válidos para base e altura.";
+            }
+        }
+    </script>
+
+
+</div>
+<h2>Álgebra</h2>
+
+    <p>Na Álgebra, podemos resolver uma equação simples como: <strong>2x + 3 = 7</strong>.</p>
+    <p>Para encontrar o valor de <strong>x</strong>, subtraímos 3 dos dois lados da equação: <strong>2x = 7 - 3</strong>, o que resulta em <strong>2x = 4</strong>.</p>
+    <p>Em seguida, dividimos ambos os lados por 2: <strong>x = 4 / 2</strong>, logo, <strong>x = 2</strong>.</p>
+    <br>
+    <h3>Exemplo:</h3>
+    <div class="image-container">
+      <img id="u" src="img/R.jfif">
+      </div>
+
+
+    <h2>Resolva a equação: ax + b = c</h2>
+    <br>
+    <p>Insira os valores de a, b, e c:</p>
+
+    <label for="a">a: </label>
+    <input type="number" id="a" placeholder="Digite o valor de a" step="any"><br><br>
+
+    <label for="b">b: </label>
+    <input type="number" id="b" placeholder="Digite o valor de b" step="any"><br><br>
+
+    <label for="c">c: </label>
+    <input type="number" id="c" placeholder="Digite o valor de c" step="any"><br><br>
+    <br>
+    <p id="resultado3"></p>
+    <br>
+    <button onclick="resolverEquacao()">Resolver</button>
+<br>
+
+
+    <script>
+        function resolverEquacao() {
+            // Pega os valores dos inputs
+            const a = parseFloat(document.getElementById("a").value);
+            const b = parseFloat(document.getElementById("b").value);
+            const c = parseFloat(document.getElementById("c").value);
+
+            // Verifica se os valores são válidos
+            if (isNaN(a) || isNaN(b) || isNaN(c) || a === 0) {
+                document.getElementById("resultado3").innerText = "Por favor, insira valores válidos para a, b e c. O valor de a deve ser diferente de 0.";
+            } else {
+                // Calcula o valor de x usando a fórmula x = (c - b) / a
+                const x = (c - b) / a;
+                // Exibe o resultado no elemento com id "resultado"
+                document.getElementById("resultado3").innerText = "O valor de x é: " + x.toFixed(2);
+            }
+        }
+    </script>
+
+
+      <br>
+      <h2>Função</h2>
+      <br>
+      <p>Uma função é um bloco de código reutilizável que executa uma tarefa específica. Ela pode receber entradas (chamadas de parâmetros), processá-las e retornar um resultado.</p>
+<p>As funções ajudam a organizar o código, evitando repetições, e facilitam a manutenção e compreensão do programa.</p>
+<p>Por exemplo, em JavaScript, uma função que soma dois números pode ser definida assim: <code>function somar(a, b) { return a + b; }</code></p>
+<br>
+
+    <h2>Função para Somar Dois Números</h2>
+    <p>Insira dois números para somá-los:</p>
+
+    <label for="num1">Número 1: </label>
+    <input type="number" id="num1" placeholder="Digite o primeiro número" step="any"><br><br>
+
+    <label for="num2">Número 2: </label>
+    <input type="number" id="num2" placeholder="Digite o segundo número" step="any">
+    
+    <p id="resultado4"></p>
+
+    <button onclick="somar()">Somar</button>
+
+
+    <script>
+        // Definição da função que soma dois números
+        function somar() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+
+            // Verifica se os valores são válidos
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById("resultado4").innerText = "Por favor, insira números válidos.";
+            } else {
+                // Soma os números e exibe o resultado
+                const resultado = num1 + num2;
+                document.getElementById("resultado4").innerText = "A soma dos números é: " + resultado;
+            }
+        }
+    </script>
+
+
+
+    </ul>
+   
+  </div>
+  </div>
+
+
+
+  <div id="portugues" class="tabcontent">
+    <h2>Português</h2>
+    <p>Tópicos importantes:</p>
+    <ul>
+      <li>Interpretação de Texto</li>
+      <li>Gramática</li>
+      <li>Redação</li>
+    </ul>
+  </div>
+
+  <div id="biologia" class="tabcontent">
+    <h2>Biologia</h2>
+    <p>Tópicos importantes:</p>
+    <ul>
+      <li>Biologia Celular</li>
+      <li>Genética</li>
+      <li>Ecologia</li>
+    </ul>
+  </div>
+
+  <div id="historia" class="tabcontent">
+    <h2>História</h2>
+    <p>Tópicos importantes:</p>
+    <ul>
+      <li>História Geral</li>
+      <li>História do Brasil</li>
+    </ul>
+  </div>
+
+  <div id="geografia" class="tabcontent">
+    <h2>Geografia</h2>
+    <p>Tópicos importantes:</p>
+    <ul>
+      <li>Geografia Física</li>
+      <li>Geopolítica</li>
+    </ul>
+  </div>
+
+
+  <div id="ingles" class="tabcontent">
+    <h2>Inglês</h2>
+    <p>Tópicos importantes:</p>
+    <ul>
+      <li>Compreensão de Texto</li>
+      <li>Gramática</li>
+      <li>Vocabulário</li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
