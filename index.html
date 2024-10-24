@@ -64,33 +64,63 @@
       <br>
      <div class="image-container">
         <img src="img/OIP.jfif" alt="">
+        <h2>Atividade de Aritmética: Qual é a multiplicação</h2>
+        <p>Qual é o resultado da multiplicação de <strong>520 x 23</strong>?</p>
+      <br>
+          <!-- Campo de entrada para o usuário inserir a resposta -->
+          <input type="number" id="resposta1" placeholder="Digite sua resposta">
+      
+          <!-- Botão para verificar a resposta -->
+          <button  onclick="verificarResposta1()">Verificar Resposta</button>
+<br>
+          <p id="resultado1"></p>
+      <br>
+          <script>
+              // Função para verificar se a resposta está correta
+              function verificarResposta1() {
+                  let respostaUsuario = document.getElementById("resposta1").value;
+                  let respostaCorreta = 11960; // Resposta correta da soma 520 * 23
+      
+                  if (respostaUsuario == respostaCorreta) {
+                      document.getElementById("resultado1").innerHTML = "Correto! 520 x 23= " + respostaCorreta;
+                  } else {
+                      document.getElementById("resultado1").innerHTML = "Incorreto. Tente novamente!";
+                  }
+              }
+          </script>
+<br>
+<br>
 
-          <h2>Atividade de Aritmética: Qual é a soma?</h2>
-          <p>Qual é o resultado da soma de <strong>520 x 23</strong>?</p>
-        
-            <!-- Campo de entrada para o usuário inserir a resposta -->
-            <input type="number" id="resposta" placeholder="Digite sua resposta">
-        
-            <!-- Botão para verificar a resposta -->
-            <button  onclick="verificarResposta()">Verificar Resposta</button>
-        
-            <!-- Área de exibição da resposta -->
-            <p id="resultado"></p>
-        
-            <script>
-                // Função para verificar se a resposta está correta
-                function verificarResposta() {
-                    let respostaUsuario = document.getElementById("resposta").value;
-                    let respostaCorreta = 11960; // Resposta correta da soma 520 * 23
-        
-                    if (respostaUsuario == respostaCorreta) {
-                        document.getElementById("resultado").innerHTML = "Correto! 520 x 23=" + respostaCorreta;
-                    } else {
-                        document.getElementById("resultado").innerHTML = "Incorreto. Tente novamente!";
-                    }
-                }
-            </script>
+<h2>Atividade de Aritmética: Qual é a divisao ?</h2>
+<p>1. Qual é o resultado da divisão de <strong>56 ÷ 23</strong>?</p>
+<br>
+
+  <!-- Campo de entrada para o usuário inserir a resposta -->
+  <input type="number" id="resposta2" placeholder="Digite sua resposta">
+
+  <!-- Botão para verificar a resposta -->
+  <button  onclick="verificarResposta2()">Verificar Resposta</button>
+<br>
+  <p id="resultado2"></p>
+
+  <script>
+      // Função para verificar se a resposta está correta
+      function verificarResposta2() {
+          let respostaUsuario = document.getElementById("resposta2").value;
+          let respostaCorreta = 9.3; // Resposta correta da soma 520 * 23
+
+          if (respostaUsuario == respostaCorreta) {
+              document.getElementById("resultado2").innerHTML = "Correto! 56 ÷ 6= " + respostaCorreta;
+          } else {
+              document.getElementById("resultado2").innerHTML = "Incorreto. Tente novamente!";
+          }
+      }
+  </script>
+
       </div>
+
+
+
       <h2>Geometria</h2>
      
       <br>
@@ -103,6 +133,8 @@
     <div class="image-container">
       <img id="h" src="img/bg1.png">
       <br>
+
+
       <p>Insira a base e a altura do triângulo:</p>
       <br>
     <label for="base">Base: </label>
@@ -110,25 +142,50 @@
 
     <label for="height">Altura: </label>
     <input type="number" id="height" placeholder="Digite a altura"><br><br>
-    <p id="resultado2"></p>
+    <p id="resultado3"></p>
 <br>
-    <button onclick="calcularArea()">Calcular Área</button>
+    <button onclick="calcularArea3()">Calcular Área</button>
 
 
     <script>
-        function calcularArea() {
-            const base = document.getElementById("base").value;
-            const altura = document.getElementById("height").value;
-
-            if(base > 0 && altura > 0) {
-                const area = (base * altura) / 2;
-                document.getElementById("resultado2").innerText = "A área do triângulo é: " + area + " unidades quadradas.";
-            } else {
-                document.getElementById("resultado2").innerText = "Por favor, insira valores válidos para base e altura.";
-            }
-        }
-    </script>
-
+      function calcularArea3() {
+          const base = document.getElementById("base").value;
+          const altura = document.getElementById("height").value;
+  
+          if(base > 0 && altura > 0) {
+              const area = (base * altura) / 2;
+              document.getElementById("resultado3").innerText = "A área do triângulo é: " + area + " unidades quadradas.";
+          } else {
+              document.getElementById("resultado3").innerText = "Por favor, insira valores válidos para base e altura.";
+          }
+      }
+  </script>
+  
+  
+  
+  
+  <h1>Cálculo da Área do Círculo</h1>
+  
+  <label for="raio">Raio: </label>
+  <input type="number" id="raio" placeholder="Digite o raio"><br><br>
+  
+  <p id="resultado4"></p>
+  <br>
+  
+  <button onclick="calcularArea4()">Calcular Área</button>
+  
+  <script>
+      function calcularArea4() {
+          const raio = document.getElementById("raio").value;
+  
+          if (raio > 0) {
+              const area = Math.PI * Math.pow(raio, 2); // Cálculo da área do círculo
+              document.getElementById("resultado4").innerText = "A área do círculo é: " + area.toFixed(2) + " unidades quadradas.";
+          } else {
+              document.getElementById("resultado4").innerText = "Por favor, insira um valor válido para o raio.";
+          }
+      }
+  </script>
 
 </div>
 <h2>Álgebra</h2>
@@ -156,14 +213,14 @@
     <label for="c">c: </label>
     <input type="number" id="c" placeholder="Digite o valor de c" step="any"><br><br>
     <br>
-    <p id="resultado3"></p>
+    <p id="resultado5"></p>
     <br>
-    <button onclick="resolverEquacao()">Resolver</button>
+    <button onclick="resolverEquacao5()">Resolver</button>
 <br>
 
 
     <script>
-        function resolverEquacao() {
+        function resolverEquacao5() {
             // Pega os valores dos inputs
             const a = parseFloat(document.getElementById("a").value);
             const b = parseFloat(document.getElementById("b").value);
@@ -171,12 +228,12 @@
 
             // Verifica se os valores são válidos
             if (isNaN(a) || isNaN(b) || isNaN(c) || a === 0) {
-                document.getElementById("resultado3").innerText = "Por favor, insira valores válidos para a, b e c. O valor de a deve ser diferente de 0.";
+                document.getElementById("resultado5").innerText = "Por favor, insira valores válidos para a, b e c. O valor de a deve ser diferente de 0.";
             } else {
                 // Calcula o valor de x usando a fórmula x = (c - b) / a
                 const x = (c - b) / a;
                 // Exibe o resultado no elemento com id "resultado"
-                document.getElementById("resultado3").innerText = "O valor de x é: " + x.toFixed(2);
+                document.getElementById("resultado5").innerText = "O valor de x é: " + x.toFixed(2);
             }
         }
     </script>
@@ -199,24 +256,24 @@
     <label for="num2">Número 2: </label>
     <input type="number" id="num2" placeholder="Digite o segundo número" step="any">
     
-    <p id="resultado4"></p>
+    <p id="resultado6"></p>
 
-    <button onclick="somar()">Somar</button>
+    <button onclick="somar6()">Somar</button>
 
 
     <script>
         // Definição da função que soma dois números
-        function somar() {
+        function somar6() {
             const num1 = parseFloat(document.getElementById("num1").value);
             const num2 = parseFloat(document.getElementById("num2").value);
 
             // Verifica se os valores são válidos
             if (isNaN(num1) || isNaN(num2)) {
-                document.getElementById("resultado4").innerText = "Por favor, insira números válidos.";
+                document.getElementById("resultado6").innerText = "Por favor, insira números válidos.";
             } else {
                 // Soma os números e exibe o resultado
                 const resultado = num1 + num2;
-                document.getElementById("resultado4").innerText = "A soma dos números é: " + resultado;
+                document.getElementById("resultado6").innerText = "A soma dos números é: " + resultado;
             }
         }
     </script>
@@ -244,7 +301,44 @@
     <h2>Biologia</h2>
     <p>Tópicos importantes:</p>
     <ul>
-      <li>Biologia Celular</li>
+      <h2>Biologia Celular</h2>
+
+ 
+          <script>
+              function mostrarPerguntas() {
+                  // Pergunta 1: Qual a função das mitocôndrias nas células?
+                  let pergunta1 = "Qual é a principal função das mitocôndrias em uma célula?";
+                  let resposta1 = "As mitocôndrias são responsáveis pela produção de energia (ATP) através do processo de respiração celular.";
+      
+                  // Pergunta 2: O que é o retículo endoplasmático rugoso?
+                  let pergunta2 = "O que é o retículo endoplasmático rugoso e qual sua função?";
+                  let resposta2 = "O retículo endoplasmático rugoso é uma organela envolvida na síntese de proteínas. Ele possui ribossomos aderidos à sua membrana.";
+      
+                  // Exibindo as perguntas e respostas
+                  document.getElementById("pergunta1").innerHTML = pergunta1;
+                  document.getElementById("resposta1").innerHTML = resposta1;
+      
+                  document.getElementById("pergunta2").innerHTML = pergunta2;
+                  document.getElementById("resposta2").innerHTML = resposta2;
+              }
+          </script>
+ 
+          <h1>Perguntas de Biologia Celular</h1>
+      
+          <div>
+              <p><strong>Pergunta 1:</strong> <span id="pergunta1"></span></p>
+              <p><strong>Resposta 1:</strong> <span id="resposta1"></span></p>
+          </div>
+      
+          <div>
+              <p><strong>Pergunta 2:</strong> <span id="pergunta2"></span></p>
+              <p><strong>Resposta 2:</strong> <span id="resposta2"></span></p>
+          </div>
+      
+          <button onclick="mostrarPerguntas()">Mostrar Perguntas e Respostas</button>
+ 
+      
+
       <li>Genética</li>
       <li>Ecologia</li>
     </ul>
